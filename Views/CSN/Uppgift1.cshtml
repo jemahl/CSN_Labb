@@ -1,0 +1,59 @@
+@using System.Xml.Linq
+@model XElement
+
+@{
+    ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
+    string currentNum = "";
+    string prevNum = "";
+    int count = 0;
+}
+
+<h2>Uppgift 1 - Utbetalningar per ärende</h2>
+@while(count<3){
+<table table class="table-bordered table_50">
+    <thead>
+        <tr>
+            <th>
+                Datum
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Summa
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kurs in Model.Elements("Utbetalning"))
+        {
+        currentNum = (string?)kurs.Element("Arendenummer");
+        @if((currentNum != "" && prevNum == "") || currentNum == prevNum){
+        <tr>
+            <td>
+                @((string?)kurs.Element("Datum"))
+            </td>
+            <td>
+                @((string?)kurs.Element("Status"))
+            </td>
+            <td>
+                @((string?)kurs.Element("Summa"))
+            </td>
+        </tr>
+        prevNum = currentNum;
+        }
+        else{
+            count++;
+            break;
+        }
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+}
