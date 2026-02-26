@@ -93,6 +93,7 @@ namespace CSN_Lab_Shell.Controllers
             AND ut.UtbetTidID = utb.UtbetaldTidID AND utb.BeloppID = b.BeloppID
             GROUP BY a.Arendenummer, u.UtbetDatum";
             XElement result = SQLResult(query, "UtbetArende", "Utbetalning").Result;
+            result.Save("Result.xml");
             
             return View(result);
         }

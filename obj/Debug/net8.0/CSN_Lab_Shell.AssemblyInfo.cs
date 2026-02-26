@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSN_Lab_Shell")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19865afd455c2e50eecb8df1b034f7f77142cd6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e725feea305f837cb2b204b3f4b3d567737d3d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSN_Lab_Shell")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSN_Lab_Shell")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

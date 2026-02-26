@@ -5,11 +5,16 @@
     ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
     string currentNum = "";
     string prevNum = "";
-    int count = 0;
+    bool notEmpty = true;
+    var hej = Model.Elements(name: "Utbetalning").Reverse();
+    var lastNum = hej;
+    int count = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value).Count();
+    XNode lastNode = Model.LastNode;
 }
 
+@{Console.WriteLine(lastNode);}
 <h2>Uppgift 1 - Utbetalningar per ärende</h2>
-@while(count<3){
+@for(int i =0; i<count; i++){
 <table table class="table-bordered table_50">
     <thead>
         <tr>
@@ -27,7 +32,9 @@
     <tbody>
         @foreach (var kurs in Model.Elements("Utbetalning"))
         {
-        currentNum = (string?)kurs.Element("Arendenummer");
+        @if(currentNum == "" /*|| Int32.Parse(prevNum) < Int32.Parse((string?)kurs.Element("Arendenummer"))*/){
+            currentNum = (string?)kurs.Element("Arendenummer");
+            }
         @if((currentNum != "" && prevNum == "") || currentNum == prevNum){
         <tr>
             <td>
@@ -40,14 +47,17 @@
                 @((string?)kurs.Element("Summa"))
             </td>
         </tr>
-            prevNum = currentNum;
+        
+        
+        prevNum = currentNum;
+            //kurs.Element("Utbetalning").Elements().Remove();
         }
         else if (Int32.Parse(prevNum) < Int32.Parse(currentNum)){
             prevNum = currentNum;
             break;
         }
         else{
-            count++;
+            notEmpty = false;
         }
         }
         <tr>
