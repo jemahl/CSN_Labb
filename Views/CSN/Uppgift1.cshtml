@@ -40,11 +40,14 @@
                 @((string?)kurs.Element("Summa"))
             </td>
         </tr>
-        prevNum = currentNum;
+            prevNum = currentNum;
+        }
+        else if (Int32.Parse(prevNum) < Int32.Parse(currentNum)){
+            prevNum = currentNum;
+            break;
         }
         else{
             count++;
-            break;
         }
         }
         <tr>

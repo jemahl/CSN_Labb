@@ -56,3 +56,4 @@ c:\Users\Jessica\Desktop\Skola\Y3\Informationsinfrastruktur\CSN_Lab_Shell\obj\De
 c:\Users\Jessica\Desktop\Skola\Y3\Informationsinfrastruktur\CSN_Lab_Shell\obj\Debug\net8.0\staticwebassets.build.json.cache
 c:\Users\Jessica\Desktop\Skola\Y3\Informationsinfrastruktur\CSN_Lab_Shell\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Jessica\Desktop\Skola\Y3\Informationsinfrastruktur\CSN_Lab_Shell\obj\Debug\net8.0\CSN_Lab_.F2318561.Up2Date
+c:\Users\Jessica\Desktop\Skola\Y3\Informationsinfrastruktur\CSN_Lab_Shell\obj\Debug\net8.0\CSN_Lab_Shell.sourcelink.json
