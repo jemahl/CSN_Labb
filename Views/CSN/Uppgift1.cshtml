@@ -3,18 +3,11 @@
 
 @{
     ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
-    string currentNum = "";
-    string prevNum = "";
-    bool notEmpty = true;
-    var hej = Model.Elements(name: "Utbetalning").Reverse();
-    var lastNum = hej;
-    int count = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value).Count();
-    XNode lastNode = Model.LastNode;
+    var halloj = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value);
 }
 
-@{Console.WriteLine(lastNode);}
 <h2>Uppgift 1 - Utbetalningar per ärende</h2>
-@for(int i =0; i<count; i++){
+@foreach(var group in halloj){
 <table table class="table-bordered table_50">
     <thead>
         <tr>
@@ -30,35 +23,22 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var kurs in Model.Elements("Utbetalning"))
+        @foreach (var arende in group)
         {
-        @if(currentNum == "" /*|| Int32.Parse(prevNum) < Int32.Parse((string?)kurs.Element("Arendenummer"))*/){
-            currentNum = (string?)kurs.Element("Arendenummer");
-            }
-        @if((currentNum != "" && prevNum == "") || currentNum == prevNum){
         <tr>
             <td>
-                @((string?)kurs.Element("Datum"))
+                @((string?)arende.Element("Datum"))
             </td>
             <td>
-                @((string?)kurs.Element("Status"))
+                @((string?)arende.Element("Status"))
             </td>
             <td>
-                @((string?)kurs.Element("Summa"))
+                @((string?)arende.Element("Summa"))
             </td>
         </tr>
         
         
-        prevNum = currentNum;
-            //kurs.Element("Utbetalning").Elements().Remove();
-        }
-        else if (Int32.Parse(prevNum) < Int32.Parse(currentNum)){
-            prevNum = currentNum;
-            break;
-        }
-        else{
-            notEmpty = false;
-        }
+        
         }
         <tr>
             <td></td>
