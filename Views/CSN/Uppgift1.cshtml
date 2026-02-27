@@ -4,12 +4,12 @@
 @{
     ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
     var arenden = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value);
-    int utbetald = 0;
-    int planerad = 0;
 }
 
 <h2>Uppgift 1 - Utbetalningar per ärende</h2>
 @foreach(var arendenummer in arenden){
+int utbetald = 0;
+int planerad = 0;
 var bidrag = arendenummer.ElementAt(0);
 
 <h3>Ärende @arendenummer.Key</h3>
