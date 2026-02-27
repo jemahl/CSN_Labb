@@ -4,6 +4,8 @@
 @{
     ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
     var arenden = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value);
+    int utbetald = 0;
+    int planerad = 0;
 }
 
 <h2>Uppgift 1 - Utbetalningar per ärende</h2>
@@ -40,13 +42,24 @@ var bidrag = arendenummer.ElementAt(0);
                 @((string?)arende.Element("Summa"))
             </td>
         </tr>
+        if ((string?)arende.Element("Status") == "Utbetald"){
+            utbetald += Int32.Parse((string?)arende.Element(name: "Summa"));
+        }
+        else{
+            planerad += Int32.Parse((string?)arende.Element(name: "Summa"));
+        }
         }
         <tr>
-            <td></td>
-            <td></td>
-            <td>
-                
-            </td>
+            <td>Total summa:</td>
+            <td colspan="2">@(utbetald+planerad)</td>
+        </tr>
+        <tr>
+            <td>Utbetald summa:</td>
+            <td colspan="2">@utbetald</td>
+        </tr>
+        <tr>
+            <td>Kvarvarande summa:</td>
+            <td colspan="2">@planerad</td>
         </tr>
     </tbody>
 </table>
