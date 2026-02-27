@@ -87,10 +87,10 @@ namespace CSN_Lab_Shell.Controllers
         // GET: /Csn/Uppgift1
         public ActionResult Uppgift1()
         {
-            string query = @"SELECT a.Arendenummer, u.UtbetDatum as Datum, u.UtbetStatus as Status, SUM((Sluttid-starttid+1) * b.Belopp) AS Summa
-            FROM Arende a, Utbetalningsplan up, Utbetalning u, UtbetaldTid ut, UtbetaldTid_Belopp utb, Belopp b
+            string query = @"SELECT a.Arendenummer, s.Beskrivning, u.UtbetDatum as Datum, u.UtbetStatus as Status, SUM((Sluttid-starttid+1) * b.Belopp) AS Summa
+            FROM Arende a, Utbetalningsplan up, Utbetalning u, UtbetaldTid ut, UtbetaldTid_Belopp utb, Belopp b, Stodform s
             WHERE a.Arendenummer = up.Arendenummer AND u.UtbetPlanID = up.UtbetPlanID AND u.UtbetID = ut.UtbetID 
-            AND ut.UtbetTidID = utb.UtbetaldTidID AND utb.BeloppID = b.BeloppID
+            AND ut.UtbetTidID = utb.UtbetaldTidID AND utb.BeloppID = b.BeloppID AND s.Stodformskod = a.Stodformskod
             GROUP BY a.Arendenummer, u.UtbetDatum";
             XElement result = SQLResult(query, "UtbetArende", "Utbetalning").Result;
             result.Save("Result.xml");

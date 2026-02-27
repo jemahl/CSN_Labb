@@ -3,11 +3,15 @@
 
 @{
     ViewBag.Title = "Uppgift 1 - Utbetalningar per ärende";
-    var halloj = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value);
+    var arenden = Model.Elements().GroupBy(x => x.Element("Arendenummer").Value);
 }
 
 <h2>Uppgift 1 - Utbetalningar per ärende</h2>
-@foreach(var group in halloj){
+@foreach(var arendenummer in arenden){
+var bidrag = arendenummer.ElementAt(0);
+
+<h3>Ärende @arendenummer.Key</h3>
+<p>Bidrag: @((string?)bidrag.Element("Beskrivning"))</p>
 <table table class="table-bordered table_50">
     <thead>
         <tr>
@@ -23,7 +27,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var arende in group)
+        @foreach (var arende in arendenummer)
         {
         <tr>
             <td>
@@ -36,9 +40,6 @@
                 @((string?)arende.Element("Summa"))
             </td>
         </tr>
-        
-        
-        
         }
         <tr>
             <td></td>
