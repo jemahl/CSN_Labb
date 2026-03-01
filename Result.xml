@@ -1,206 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<UtbetArende>
-  <Utbetalning>
+<BeviljadeTider>
+  <BeviljadTid>
     <Arendenummer>14</Arendenummer>
     <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20090908</Datum>
-    <Status>Utbetald</Status>
-    <Summa>7820</Summa>
-  </Utbetalning>
-  <Utbetalning>
+    <Starttid>200936</Starttid>
+    <Sluttid>200953</Sluttid>
+    <Summa>35190</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>14</Arendenummer>
     <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20090925</Datum>
-    <Status>Utbetald</Status>
-    <Summa>7820</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20091023</Datum>
-    <Status>Utbetald</Status>
-    <Summa>7820</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20091125</Datum>
-    <Status>Utbetald</Status>
-    <Summa>7820</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20091223</Datum>
-    <Status>Utbetald</Status>
-    <Summa>7980</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20100120</Datum>
-    <Status>Utbetald</Status>
-    <Summa>12210</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20100225</Datum>
-    <Status>Planerad</Status>
-    <Summa>8140</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20100325</Datum>
-    <Status>Planerad</Status>
-    <Summa>8140</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20100423</Datum>
-    <Status>Planerad</Status>
-    <Summa>8140</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>14</Arendenummer>
-    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
-    <Datum>20100525</Datum>
-    <Status>Planerad</Status>
+    <Starttid>201001</Starttid>
+    <Sluttid>201002</Sluttid>
     <Summa>4070</Summa>
-  </Utbetalning>
-  <Utbetalning>
+  </BeviljadTid>
+  <BeviljadTid>
+    <Arendenummer>14</Arendenummer>
+    <Beskrivning>Studiemedel för studier i Sverige</Beskrivning>
+    <Starttid>201003</Starttid>
+    <Sluttid>201022</Sluttid>
+    <Summa>40700</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>15</Arendenummer>
     <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20090908</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1004</Summa>
-  </Utbetalning>
-  <Utbetalning>
+    <Starttid>200936</Starttid>
+    <Sluttid>200953</Sluttid>
+    <Summa>4518</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>15</Arendenummer>
     <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20090925</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1004</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20091023</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1004</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20091125</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1004</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20091223</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1000</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20100120</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1494</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20100225</Datum>
-    <Status>Planerad</Status>
-    <Summa>996</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20100325</Datum>
-    <Status>Planerad</Status>
-    <Summa>996</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20100423</Datum>
-    <Status>Planerad</Status>
-    <Summa>996</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>15</Arendenummer>
-    <Beskrivning>Tilläggsbidrag</Beskrivning>
-    <Datum>20100525</Datum>
-    <Status>Planerad</Status>
+    <Starttid>201001</Starttid>
+    <Sluttid>201002</Sluttid>
     <Summa>498</Summa>
-  </Utbetalning>
-  <Utbetalning>
+  </BeviljadTid>
+  <BeviljadTid>
+    <Arendenummer>15</Arendenummer>
+    <Beskrivning>Tilläggsbidrag</Beskrivning>
+    <Starttid>201003</Starttid>
+    <Sluttid>201022</Sluttid>
+    <Summa>4980</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>16</Arendenummer>
     <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20090908</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1692</Summa>
-  </Utbetalning>
-  <Utbetalning>
+    <Starttid>200936</Starttid>
+    <Sluttid>200953</Sluttid>
+    <Summa>7614</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>16</Arendenummer>
     <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20090925</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1692</Summa>
-  </Utbetalning>
-  <Utbetalning>
+    <Starttid>201001</Starttid>
+    <Sluttid>201002</Sluttid>
+    <Summa>838</Summa>
+  </BeviljadTid>
+  <BeviljadTid>
     <Arendenummer>16</Arendenummer>
     <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20091023</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1692</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20091125</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1692</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20091223</Datum>
-    <Status>Utbetald</Status>
-    <Summa>1684</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20100120</Datum>
-    <Status>Utbetald</Status>
-    <Summa>2514</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20100225</Datum>
-    <Status>Planerad</Status>
-    <Summa>1676</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20100325</Datum>
-    <Status>Planerad</Status>
-    <Summa>1676</Summa>
-  </Utbetalning>
-  <Utbetalning>
-    <Arendenummer>16</Arendenummer>
-    <Beskrivning>Tilläggslån</Beskrivning>
-    <Datum>20100423</Datum>
-    <Status>Planerad</Status>
-    <Summa>1676</Summa>
-  </Utbetalning>
-</UtbetArende>
+    <Starttid>201003</Starttid>
+    <Sluttid>201020</Sluttid>
+    <Summa>7542</Summa>
+  </BeviljadTid>
+</BeviljadeTider>

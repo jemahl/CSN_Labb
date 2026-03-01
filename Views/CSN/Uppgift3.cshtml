@@ -3,6 +3,45 @@
 
 @{
     ViewBag.Title = "Uppgift 3 - Beviljade Tider";
+
 }
 
 <h2>Uppgift 3 - Beviljade Tider</h2>
+
+<table table class="table-bordered table_50">
+    <thead>
+        <tr>
+            <th>
+                Startdatum
+            </th>
+            <th>
+                Slutdatum
+            </th>
+            <th>
+                Typ
+            </th>
+            <th>
+                Summa
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var beviljad in Model.Elements("BeviljadTid"))
+        {
+        <tr>
+            <td>
+                @((string?)beviljad.Element("Starttid"))
+            </td>
+            <td>
+                @((string?)beviljad.Element("Sluttid"))
+            </td>
+            <td>
+                @((string?)beviljad.Element("Beskrivning"))
+            </td>
+            <td>
+                @((string?)beviljad.Element("Summa"))
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -93,8 +93,9 @@ namespace CSN_Lab_Shell.Controllers
             AND ut.UtbetTidID = utb.UtbetaldTidID AND utb.BeloppID = b.BeloppID AND s.Stodformskod = a.Stodformskod
             GROUP BY a.Arendenummer, u.UtbetDatum";
             XElement result = SQLResult(query, "UtbetArende", "Utbetalning").Result;
-            result.Save("Result.xml");
             
+            result.Save("Result.xml");
+
             return View(result);
         }
 
@@ -110,7 +111,18 @@ namespace CSN_Lab_Shell.Controllers
         // GET: /Csn/Uppgift3
         public ActionResult Uppgift3()
         {
-            return View();
+            string query = @"SELECT a.Arendenummer, s.Beskrivning, bt.Starttid, bt.Sluttid, SUM((bt.Sluttid-bt.starttid+1) * b.Belopp) AS Summa
+            FROM Arende a, Belopp b, Stodform s, BeviljadTid bt, BeviljadTid_Belopp btb 
+            WHERE a.Arendenummer = bt.Arendenummer AND s.Stodformskod = a.Stodformskod 
+			AND bt.BeviljadTidID = btb.BeviljadTidID AND btb.BeloppID = b.BeloppID
+            GROUP BY bt.BeviljadTidID
+			ORDER BY a.Arendenummer ASC";
+
+            XElement result = SQLResult(query, "BeviljadeTider", "BeviljadTid").Result;
+            
+            result.Save("Result.xml");
+
+            return View(result);
         }
     }
 }
