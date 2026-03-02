@@ -6,3 +6,47 @@
 }
 
 <h2>Uppgift 2 - Utbetalningar och bidragstyper</h2>
+<table table class="table-bordered table_50">
+    <thead>
+        <tr>
+            <th>
+                Datum
+            </th>
+            <th>
+                Totalsumma
+            </th>
+            <th>
+                Utbetalningar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var date in Model.Elements("UtbetalningsDatum"))
+        {
+            <tr>
+                <td>
+                    @((string?)date.Element("Datum"))
+                </td>
+                <td>
+                    @((string?)date.Element("Totalsumma"))
+                </td>
+                <td>
+                    @foreach (var type in date.Element("Bidragstyper").Elements("Bidragstyp"))
+                    {
+                        <table>
+                            <tr>
+                                <td>
+                                    @((string?)type.Element("Beskrivning"))
+                                </td>
+                                <td>
+                                    @((string?)type.Element("Summa"))
+                                </td>
+                            </tr>
+                        </table>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

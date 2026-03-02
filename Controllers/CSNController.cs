@@ -94,7 +94,7 @@ namespace CSN_Lab_Shell.Controllers
             GROUP BY a.Arendenummer, u.UtbetDatum";
             XElement result = SQLResult(query, "UtbetArende", "Utbetalning").Result;
             result.Save("Result.xml");
-            
+
             return View(result);
         }
 
@@ -103,7 +103,30 @@ namespace CSN_Lab_Shell.Controllers
         // GET: /Csn/Uppgift2
         public ActionResult Uppgift2()
         {
-            return View();
+            string query = @"SELECT u.UtbetDatum AS Datum, s.Beskrivning, SUM((Sluttid-starttid+1) * b.Belopp) AS Summa
+            FROM Utbetalning u, UtbetaldTid ut, UtbetaldTid_Belopp utb, Belopp b, Beloppstyp s
+            WHERE u.UtbetID = ut.UtbetID AND ut.UtbetTidID = utb.UtbetaldTidID AND utb.BeloppID = b.BeloppID AND b.Beloppstypkod = s.Beloppstypkod
+            GROUP BY u.UtbetDatum, s.Beskrivning;";
+            XElement xml = SQLResult(query, "Utbetalningar", "Utbetalning").Result;
+
+            //u = UtbetDatum
+            XElement result = new XElement("Utbetalningar",
+                from u in xml.Elements("Utbetalning")
+                group u by (string)u.Element("Datum") into g //gruppera baserat på datumen
+                select new XElement("UtbetalningsDatum", //ny nod
+                    new XElement("Datum", g.Key),
+                    new XElement("Totalsumma", g.Sum(x => (int?)x.Element("Summa"))),
+                    new XElement("Bidragstyper",
+                        from type in g
+                        select new XElement("Bidragstyp",
+                            new XElement("Beskrivning", (string)type.Element("Beskrivning")),
+                            new XElement("Summa", (int)type.Element("Summa"))
+                        )
+                    )
+                )
+            );
+            result.Save("Uppgift2.xml");
+            return View(result);
         }
 
         //
